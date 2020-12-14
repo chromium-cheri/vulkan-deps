@@ -2,11 +2,11 @@
 # used by gclient to determine what version of each dependency to check out, and
 # where.
 
+# Avoids the need for a custom root variable.
+use_relative_paths = True
+
 vars = {
   'chromium_git': 'https://chromium.googlesource.com',
-
-  # Overridden in the parent repos (e.g. Chromium or ANGLE)
-  'vulkan_deps_root': '.',
 
   # Current revision of glslang, the Khronos SPIRV compiler.
   'glslang_revision': 'c594de23cdd790d64ad5f9c8b059baae0ee2941d',
@@ -34,35 +34,35 @@ vars = {
 }
 
 deps = {
-  '{vulkan_deps_root}/glslang/src': {
+  'glslang/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/glslang@{glslang_revision}',
   },
 
-  '{vulkan_deps_root}/spirv-cross/src': {
+  'spirv-cross/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/SPIRV-Cross@{spirv_cross_revision}',
   },
 
-  '{vulkan_deps_root}/spirv-headers/src': {
+  'spirv-headers/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/SPIRV-Headers@{spirv_headers_revision}',
   },
 
-  '{vulkan_deps_root}/spirv-tools/src': {
+  'spirv-tools/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/SPIRV-Tools@{spirv_tools_revision}',
   },
 
-  '{vulkan_deps_root}/vulkan-headers/src': {
+  'vulkan-headers/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Headers@{vulkan_headers_revision}',
   },
 
-  '{vulkan_deps_root}/vulkan-loader/src': {
+  'vulkan-loader/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Loader@{vulkan_loader_revision}',
   },
 
-  '{vulkan_deps_root}/vulkan-tools/src': {
+  'vulkan-tools/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Tools@{vulkan_tools_revision}',
   },
 
-  '{vulkan_deps_root}/vulkan-validation-layers/src': {
+  'vulkan-validation-layers/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-ValidationLayers@{vulkan_validation_revision}',
   },
 }

@@ -74,7 +74,7 @@ def _local_commit_amend(commit_msg, dry_run):
     new_commit_msg = old_commit_msg[:bug_index] + commit_msg + '\n\n' + old_commit_msg[bug_index:]
     logging.debug('New commit message:\n%s\n', new_commit_msg)
     if not dry_run:
-        with tempfile.NamedTemporaryFile(delete=False) as ntf:
+        with tempfile.NamedTemporaryFile(delete=False, mode="w") as ntf:
             ntf.write(new_commit_msg)
             ntf.close()
             git('commit', '--amend', '--no-edit', '--file=%s' % ntf.name)

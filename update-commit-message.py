@@ -34,6 +34,7 @@ solutions = [{
     'managed': False,
 }]
 """
+INSERT_NEEDLE = 'If this roll has caused a breakage'
 
 
 def run(cmd, args):
@@ -67,11 +68,11 @@ def _local_commit_amend(commit_msg, dry_run):
     logging.info('Amending changes to local commit.')
     old_commit_msg = git('log', '-1', '--pretty=%B')
     logging.debug('Existing commit message:\n%s\n', old_commit_msg)
-    bug_index = old_commit_msg.rfind('Bug:')
-    if bug_index == -1:
-        logging.exception('"Bug:" not found in commit message.')
+    insert_index = old_commit_msg.rfind(INSERT_NEEDLE)
+    if insert_index == -1:
+        logging.exception('"%s" not found in commit message.' % INSERT_NEEDLE)
 
-    new_commit_msg = old_commit_msg[:bug_index] + commit_msg + '\n\n' + old_commit_msg[bug_index:]
+    new_commit_msg = old_commit_msg[:insert_index] + commit_msg + '\n\n' + old_commit_msg[insert_index:]
     logging.debug('New commit message:\n%s\n', new_commit_msg)
     if not dry_run:
         with tempfile.NamedTemporaryFile(delete=False, mode="w") as ntf:

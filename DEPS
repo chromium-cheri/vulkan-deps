@@ -12,7 +12,7 @@ vars = {
   'glslang_revision': '1fb2f1d7896627d62a289439a2c3e750e551a7ab',
 
   # Current revision of spirv-cross, the Khronos SPIRV cross compiler.
-  'spirv_cross_revision': '38cd2140071761dbf02097f2637e68c4c2c0aa78',
+  'spirv_cross_revision': '49e4117c5f56bec716ed00bcbf36d3a2e8efd90e',
 
   # Current revision fo the SPIRV-Headers Vulkan support library.
   'spirv_headers_revision': 'd13b52222c39a7e9a401b44646f0ca3a640fbd47',

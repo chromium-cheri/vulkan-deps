@@ -9,7 +9,7 @@ vars = {
   'chromium_git': 'https://chromium.googlesource.com',
 
   # Current revision of glslang, the Khronos SPIRV compiler.
-  'glslang_revision': 'f697b55c92e44296cafba906934f04602acae62b',
+  'glslang_revision': 'd1517d64cfca91f573af1bf7341dc3a5113349c0',
 
   # Current revision of spirv-cross, the Khronos SPIRV cross compiler.
   'spirv_cross_revision': '28b11e010a4dbf444804e4bcfc5a57046c69287e',

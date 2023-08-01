@@ -4,6 +4,7 @@
 
 # Avoids the need for a custom root variable.
 use_relative_paths = True
+git_dependencies = 'SYNC'
 
 vars = {
   'chromium_git': 'https://chromium.googlesource.com',

@@ -30,6 +30,9 @@ vars = {
   # Current revision of Khronos Vulkan-Tools.
   'vulkan_tools_revision': '6087a5844480e1f9cce9c645c2123f07314ce574',
 
+  # Current revision of Khronos Vulkan-Utility-Libraries.
+  'vulkan_utility_libraries_revision': '1d30c156cd69a757c2342d1f9408b92b7d5065d9',
+
   # Current revision of Khronos Vulkan-ValidationLayers.
   'vulkan_validation_revision': '094ceae12c8840418b171f858183b227a0aa3640',
 }
@@ -61,6 +64,10 @@ deps = {
 
   'vulkan-tools/src': {
     'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Tools@{vulkan_tools_revision}',
+  },
+
+  'vulkan-utility-libraries/src': {
+    'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Utility-Libraries@{vulkan_utility_libraries_revision}',
   },
 
   'vulkan-validation-layers/src': {

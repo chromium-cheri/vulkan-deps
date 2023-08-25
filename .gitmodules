@@ -19,6 +19,9 @@
 [submodule "vulkan-tools/src"]
 	path = vulkan-tools/src
 	url = https://chromium.googlesource.com/external/github.com/KhronosGroup/Vulkan-Tools
+[submodule "vulkan-utility-libraries/src"]
+	path = vulkan-utility-libraries/src
+	url = https://chromium.googlesource.com/external/github.com/KhronosGroup/Vulkan-Utility-Libraries
 [submodule "vulkan-validation-layers/src"]
 	path = vulkan-validation-layers/src
 	url = https://chromium.googlesource.com/external/github.com/KhronosGroup/Vulkan-ValidationLayers

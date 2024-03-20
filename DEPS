@@ -8,6 +8,8 @@ use_relative_paths = True
 vars = {
   'chromium_git': 'https://chromium.googlesource.com',
 
+  'chromium_cheri_git': 'https://github.com',
+
   # Current revision of glslang, the Khronos SPIRV compiler.
   'glslang_revision': 'a5bf69936ddebd45370c2e2c392b4b6f26296bad',
 
@@ -18,13 +20,13 @@ vars = {
   'spirv_headers_revision': 'bdbfd019be6952fd8fa9bd5606a8798a7530c853',
 
   # Current revision of SPIRV-Tools for Vulkan.
-  'spirv_tools_revision': 'e7c6084fd1d6d6f5ac393e842728d8be309688ca',
+  'spirv_tools_revision': '6cda1525981c4d4e58a4a4ff30f6749d1a8d428c',
 
   # Current revision of Khronos Vulkan-Headers.
-  'vulkan_headers_revision': '9e61870ecbd32514113b467e0a0c46f60ed222c7',
+  'vulkan_headers_revision': 'cf7b74a1a85dccb4240eaca91e26b5fb20b7b4c7',
 
   # Current revision of Khronos Vulkan-Loader.
-  'vulkan_loader_revision': 'b95d065ec567f862ab5baa85ab99ecb1f8979fbc',
+  'vulkan_loader_revision': '538d8ee5162f1da4188902aceecd906bfed3088e',
 
   # Current revision of Khronos Vulkan-Tools.
   'vulkan_tools_revision': '80b010b1e1b08c1f092fb2bfa337faadf8ea1ba3',
@@ -47,15 +49,15 @@ deps = {
   },
 
   'spirv-tools/src': {
-    'url': '{chromium_git}/external/github.com/KhronosGroup/SPIRV-Tools@{spirv_tools_revision}',
+    'url': '{chromium_cheri_git}/chromium-cheri/SPIRV-Tools@{spirv_tools_revision}',
   },
 
   'vulkan-headers/src': {
-    'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Headers@{vulkan_headers_revision}',
+    'url': '{chromium_cheri_git}/chromium-cheri/Vulkan-Headers@{vulkan_headers_revision}',
   },
 
   'vulkan-loader/src': {
-    'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-Loader@{vulkan_loader_revision}',
+    'url': '{chromium_cheri_git}/chromium-cheri/Vulkan-Loader@{vulkan_loader_revision}',
   },
 
   'vulkan-tools/src': {

@@ -32,7 +32,7 @@ vars = {
   'vulkan_tools_revision': '80b010b1e1b08c1f092fb2bfa337faadf8ea1ba3',
 
   # Current revision of Khronos Vulkan-ValidationLayers.
-  'vulkan_validation_revision': '414ee5c8fe6ede3ba44d9ca8832ef974f1158cd5',
+  'vulkan_validation_revision': '69915053427de929ac1e659a8c834f37dc2181db',
 }
 
 deps = {
@@ -65,6 +65,6 @@ deps = {
   },
 
   'vulkan-validation-layers/src': {
-    'url': '{chromium_git}/external/github.com/KhronosGroup/Vulkan-ValidationLayers@{vulkan_validation_revision}',
+    'url': '{chromium_cheri_git}/chromium-cheri/Vulkan-ValidationLayers@{vulkan_validation_revision}',
   },
 }
